@@ -1,0 +1,24 @@
+= Ansible Playbook README
+
+== Ansible Playbook README
+
+This Ansible playbook installs and configures Apache on a local host. It performs the following tasks:
+
+. Clones the Apache role from a GitHub repository.
+. Installs Apache using the cloned role.
+. Starts the Apache (httpd) service.
+. Adds a "Hello World" message to the Apache document root.
+
+== Playbook Content
+
+[source,yaml]
+----
+include::local.yaml[]
+----
+
+== How to Run
+
+[source,bash]
+----
+ansible-playbook -i localhost, -c local playbook.yml
+----
